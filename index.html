@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+        <title> Registro </title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <div id="container">
+            <aside id="left">
+                <p id="consultar_saldo">
+                    ¿Consultar giro?
+                </p>
+                <p  id="frase">Trabajamos<strong> juntos </strong>para <br> prestarte un <strong>mejor servicio.</strong></p>
+                <div id="fondo1" class="circulo">
+                </div>
+                <div id="fondo2" class="circulo">
+                </div>
+                <div id="fondo3" class="circulo">
+                </div>
+                <div id="relleno">
+                </div>
+                <img id="atras" src="img/bot_izq.png" alt="behind" onclick="atras();">
+                <img id="adelante" src="img/bot_der.png" alt="ahead" onclick="adelante();">
+            </aside>
+            <aside id="center">
+                <div id="fondoLlave">
+                </div>
+                <div id="recContraseña">
+                    <div id="cerrarPes">
+                         <p></p>
+                    </div>
+                    <p id="fraseRecu">
+                        ¿Estás seguro que deseas recuperar tu contraseña?
+                    </p>
+                    <button class="botModIni" id="recuperarContrasena">Recuperar contraseña</button>
+                    <button  class="botModIni" disabled style="background-color: #D4D8E8" id="reCorreo">Cancelar</button>
+                </div>
+            </aside>
+            <aside id="right">
+                <header>
+                    <div id="logo">
+                        <img src="img/logo.png" alt="logo" width="100%">
+                    </div>
+                </header>
+                <p class="iniSesion">Iniciar Sesión</p>
+                <p class="credenciales"> Ingresa tus credenciales para acceder a la plataforma</p>
+                <form id="datos" method="post" action="validar.php">
+                    <div id="usuario">
+                        <input type="text" placeholder="ingresa tu usuario" id="correo" name="correo" onkeyup="mostrarBoton();" required/>
+                        <div class="respuesta" id="usuExiste">
+                            <p>El usuario no existe</p>
+                        </div>
+                    </div>
+                    <div class="espacio"></div>
+                    <div id="passw">
+                        <input type="password" placeholder="Ingresa tu contraseña" id="contrasena" name="contrasena" onkeyup="mostrarBoton();">
+                        <div class="respuesta" id="conExiste">
+                            <p>Contraseña incorrecta</p>
+                        </div>
+                    </div>                
+                    <p class="olviTuClave" id="mosModalIni">¿Olvidaste tu contraseña?</p>
+                    <div id="verificacion">
+                        <div class="g-recaptcha" data-sitekey="6LdDXsIZAAAAAKauRFjzOD0hcIV2yfE0L0ifarNv"></div>
+                    </div>
+                    <button type="submit" id="ingreso" disabled>Ingresar ahora</button>
+                </form>
+            </aside>
+
+        </div>  
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>    
+    <script type="text/javascript" src="js/javascript.js"></script>    
+    </body>
+</html>
